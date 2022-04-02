@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: com.tulingxueyuan
+  cloud:
+    nacos:
+      server-addr: 192.168.1.7:8848
+      username: nacos
+      password: nacos
+      #一旦修改成了非properties 必须修改
+      config:
+        file-extension: yaml
+        namespace: dev
+        group: tulingmall
+        shared-configs:
+          - data-id: com.tulingxueyuan.common.properties
+            refresh: true
+            #group: 默认是default group

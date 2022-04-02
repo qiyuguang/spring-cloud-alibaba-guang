@@ -1,0 +1,18 @@
+server:
+  port: 8861
+spring:
+  application:
+    name: order-sentinel
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+      web-context-unify: false #维护链路树
+      datasource:
+        flow-rule: #可以自定义
+          server-addr: 127.0.0.1:8848
+          username: nacos
+          password: nacos
+          dataId: order-sentinel-flow-rule
+          rule-type: flow
+
