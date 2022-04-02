@@ -23,6 +23,15 @@ spring:
           #filters:
           #  - StripPrefix=1 #内置过滤器 转发之前去掉第一层路径
             #http://localhost:8020/order/add
+      #跨域配置
+      globalcors:
+        cors-configurations:
+          '[/**]': #允许跨域访问的资源
+            allowedOrigins: "*" #跨域允许来源
+            allowedMethods:
+              - GET
+              - POST
+
     nacos:
       server-addr: 127.0.0.1:8848
       discovery:
