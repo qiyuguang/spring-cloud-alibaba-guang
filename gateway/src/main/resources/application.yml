@@ -42,3 +42,7 @@ spring:
       transport:
         dashboard:
           127.0.0.1:8858
+#      scg:
+#        fallback:
+#          mode: response
+#          response-body: "{code:'',message:''}"
