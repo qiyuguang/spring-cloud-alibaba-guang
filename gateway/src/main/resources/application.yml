@@ -38,10 +38,10 @@ spring:
         username: nacos
         password: nacos
     #配置sentinel
-    sentinel:
-      transport:
-        dashboard:
-          127.0.0.1:8858
+#    sentinel:
+#      transport:
+#        dashboard:
+#          127.0.0.1:8858
 #      scg:
 #        fallback:
 #          mode: response

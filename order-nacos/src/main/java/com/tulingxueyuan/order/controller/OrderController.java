@@ -16,4 +16,8 @@ public class OrderController {
         String msg = restTemplate.getForObject("http://stock-service/stock/reduce", String.class);
         return "hello world"+msg;
     }
+    @RequestMapping("/get")
+    public String get(){
+        return "查询订单";
+    }
 }
