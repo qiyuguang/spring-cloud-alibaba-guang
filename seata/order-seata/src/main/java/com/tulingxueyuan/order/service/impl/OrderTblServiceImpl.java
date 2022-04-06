@@ -4,7 +4,11 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tulingxueyuan.order.pojo.OrderTbl;
 import com.tulingxueyuan.order.service.OrderTblService;
 import com.tulingxueyuan.order.mapper.OrderTblMapper;
+import org.apache.skywalking.apm.toolkit.trace.Tag;
+import org.apache.skywalking.apm.toolkit.trace.Trace;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
 * @author 光子
@@ -15,6 +19,11 @@ import org.springframework.stereotype.Service;
 public class OrderTblServiceImpl extends ServiceImpl<OrderTblMapper, OrderTbl>
     implements OrderTblService{
 
+    @Override
+    @Trace
+    public List<OrderTbl> getAll() {
+        return query().list();
+    }
 }
 
 
