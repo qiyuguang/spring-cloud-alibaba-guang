@@ -21,6 +21,8 @@ public class OrderTblServiceImpl extends ServiceImpl<OrderTblMapper, OrderTbl>
 
     @Override
     @Trace
+    @Tag(key="getAll",value = "returnedObj")
+//    @Tags{@Tag(key="getAll",value="arg[0]")}
     public List<OrderTbl> getAll() {
         return query().list();
     }

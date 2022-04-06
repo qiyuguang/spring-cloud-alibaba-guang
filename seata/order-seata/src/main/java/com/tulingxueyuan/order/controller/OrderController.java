@@ -20,8 +20,7 @@ public class OrderController {
         return "hello";
     }
     @RequestMapping("all")
-    @Tag(key="getAll",value = "returnedObj")
-//    @Tags{@Tag(key="getAll",value="arg[0]")}
+
     public List<OrderTbl> all(){
         return orderTblService.getAll();
     }
